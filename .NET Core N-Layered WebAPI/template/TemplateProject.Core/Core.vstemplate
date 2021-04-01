@@ -1,0 +1,24 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TemplateProject.Core</Name>
+    <Description>N-Layared .Net Core WebAPI project template (Core)</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TemplateProject.Core</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="TemplateProject.Core.csproj" File="TemplateProject.Core.csproj" ReplaceParameters="true">
+      <Folder Name="Constants" TargetFolderName="Constants" />
+      <Folder Name="Enums" TargetFolderName="Enums" />
+      <Folder Name="Models" TargetFolderName="Models" />
+    </Project>
+  </TemplateContent>
+</VSTemplate>

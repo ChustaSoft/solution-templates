@@ -1,0 +1,47 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>.NET Core N-Layered WebAPI</Name>
+        <Description>ChustaSoft .NET Core N-Layered WebAPI</Description>
+        <Icon>Icon.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+
+            <SolutionFolder Name="1. WebServices">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.WebAPI">
+                    TemplateProject.WebAPI\WebAPI.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="2. Application">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Services">
+                    TemplateProject.Services\Services.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="3. Business">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Core">
+                    TemplateProject.Core\Core.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Domain">
+                    TemplateProject.Domain\Domain.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="4. Infrastructure">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.DataAccess">
+                    TemplateProject.DataAccess\DataAccess.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="5. Testing">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.UnitTests">
+                    TemplateProject.UnitTests\UnitTests.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>
