@@ -1,0 +1,66 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>.NET Core DDD WebAPI</Name>
+        <Description>ChustaSoft .NET Core DDD WebAPI</Description>
+        <Icon>Icon.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+        <CreateNewFolder>false</CreateNewFolder>
+        <DefaultName>ChustaSoft.DDD</DefaultName>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+
+            <SolutionFolder Name="1. WebServices">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.WebApi">
+                  ProjectTemplate.WebApi\WebApi.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="2. Application">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Application">
+                    ProjectTemplate.Application\Application.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Query.Application">
+                    ProjectTemplate.Query.Application\Query.Application.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="3. Domain">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Domain">
+                    ProjectTemplate.Domain\Domain.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="4. Shared">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Dto">
+                    ProjectTemplate.Dto\Dto.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Query.Dto">
+                    ProjectTemplate.Query.Dto\Query.Dto.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="5. Infrastructure">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Infrastructure">
+                    ProjectTemplate.Infrastructure\Infrastructure.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Query.Infrastructure">
+                    ProjectTemplate.Query.Infrastructure\Query.Infrastructure.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="6. Framework">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Framework">
+                    ProjectTemplate.Framework\Framework.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+
+            <SolutionFolder Name="Test">
+                <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Framework.Test">
+                    ProjectTemplate.Framework.Test\Framework.Test.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder> 
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>

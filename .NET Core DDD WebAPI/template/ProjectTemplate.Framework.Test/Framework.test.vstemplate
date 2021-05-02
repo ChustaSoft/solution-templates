@@ -1,0 +1,43 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>ProjectTemplate.Framework.Test</Name>
+    <Description>.NET Core DDD WebAPI (Framework Tests)</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ProjectTemplate.Framework.Test</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ProjectTemplate.Framework.Test.csproj" File="ProjectTemplate.Framework.Test.csproj" ReplaceParameters="true">
+      <Folder Name="BusTests" TargetFolderName="BusTests">
+        <Folder Name="Aggregates" TargetFolderName="Aggregates">
+          <ProjectItem ReplaceParameters="true" TargetFileName="User.cs">User.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Commands" TargetFolderName="Commands">
+          <ProjectItem ReplaceParameters="true" TargetFileName="CommandThatTriggersUnhandledEvent.cs">CommandThatTriggersUnhandledEvent.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="CommandWithoutHandler.cs">CommandWithoutHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="CreateUserCommand.cs">CreateUserCommand.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SendWelcomeEmailCommand.cs">SendWelcomeEmailCommand.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UpdateUserCommand.cs">UpdateUserCommand.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Events" TargetFolderName="Events">
+          <ProjectItem ReplaceParameters="true" TargetFileName="EventWithoutHandler.cs">EventWithoutHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserCreatedEvent.cs">UserCreatedEvent.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserUpdatedEvent.cs">UserUpdatedEvent.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="WelcomeEmailSentEvent.cs">WelcomeEmailSentEvent.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Policies" TargetFolderName="Policies">
+          <ProjectItem ReplaceParameters="true" TargetFileName="SendEmailPolicy.cs">SendEmailPolicy.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="BusTests.cs">BusTests.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

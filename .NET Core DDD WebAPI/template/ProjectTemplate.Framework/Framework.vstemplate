@@ -1,0 +1,54 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>ProjectTemplate.Framework</Name>
+    <Description>.NET Core DDD WebAPI (Framework)</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ProjectTemplate.Framework</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ProjectTemplate.Framework.csproj" File="ProjectTemplate.Framework.csproj" ReplaceParameters="true">
+      <Folder Name="Aggregates" TargetFolderName="Aggregates">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Aggregate.cs">Aggregate.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="InvariantAttribute.cs">InvariantAttribute.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ValueObject.cs">ValueObject.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Commands" TargetFolderName="Commands">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Command.cs">Command.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CreationCommand.cs">CreationCommand.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ICommandHandler.cs">ICommandHandler.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UpdateCommand.cs">UpdateCommand.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Events" TargetFolderName="Events">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DomainEvent.cs">DomainEvent.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IEventHandler.cs">IEventHandler.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IEventStore.cs">IEventStore.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Policies" TargetFolderName="Policies">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IPolicy.cs">IPolicy.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Policy.cs">Policy.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Projections" TargetFolderName="Projections">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IProjection.cs">IProjection.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IReadModelRegenerator.cs">IReadModelRegenerator.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ReadModelRegenerator.cs">ReadModelRegenerator.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Repositories" TargetFolderName="Repositories">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AggregateRepository.cs">AggregateRepository.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IAggregateRepository.cs">IAggregateRepository.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IReadModelRepository.cs">IReadModelRepository.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Bus.cs">Bus.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="IBus.cs">IBus.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StartupExtensions.cs">StartupExtensions.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

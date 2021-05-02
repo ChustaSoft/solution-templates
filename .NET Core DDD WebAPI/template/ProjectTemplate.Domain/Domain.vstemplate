@@ -1,0 +1,71 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>ProjectTemplate.Domain</Name>
+    <Description>.NET Core DDD WebAPI (Domain)</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ProjectTemplate.Domain</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ProjectTemplate.Domain.csproj" File="ProjectTemplate.Domain.csproj" ReplaceParameters="true">
+      <Folder Name="Aggregates" TargetFolderName="Aggregates">
+        <Folder Name="EmailMessages" TargetFolderName="EmailMessages">
+          <ProjectItem ReplaceParameters="true" TargetFileName="EmailMessage.cs">EmailMessage.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SubjectLine.cs">SubjectLine.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="TextContent.cs">TextContent.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Users" TargetFolderName="Users">
+          <ProjectItem ReplaceParameters="true" TargetFileName="FirstName.cs">FirstName.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LastName.cs">LastName.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="User.cs">User.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Commands" TargetFolderName="Commands">
+        <Folder Name="EmailMessages" TargetFolderName="EmailMessages">
+          <ProjectItem ReplaceParameters="true" TargetFileName="CreateEmailMessageCommand.cs">CreateEmailMessageCommand.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Users" TargetFolderName="Users">
+          <ProjectItem ReplaceParameters="true" TargetFileName="EditUserCommand.cs">EditUserCommand.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RegisterUserCommand.cs">RegisterUserCommand.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="DomainServices" TargetFolderName="DomainServices">
+        <Folder Name="Repositories" TargetFolderName="Repositories">
+          <Folder Name="Users" TargetFolderName="Users">
+            <ProjectItem ReplaceParameters="true" TargetFileName="IUserRepository.cs">IUserRepository.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="UserRepository.cs">UserRepository.cs</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+      <Folder Name="Events" TargetFolderName="Events">
+        <Folder Name="EmailMessages" TargetFolderName="EmailMessages">
+          <ProjectItem ReplaceParameters="true" TargetFileName="EmailMessageCreatedEvent.cs">EmailMessageCreatedEvent.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Users" TargetFolderName="Users">
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserEditedEvent.cs">UserEditedEvent.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserRegisteredEvent.cs">UserRegisteredEvent.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Policies" TargetFolderName="Policies">
+        <ProjectItem ReplaceParameters="true" TargetFileName="SendWelcomEmailPolicy.cs">SendWelcomEmailPolicy.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Projections" TargetFolderName="Projections">
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserProfileInformationProjection.cs">UserProfileInformationProjection.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Shared" TargetFolderName="Shared">
+        <Folder Name="ValueTypes" TargetFolderName="ValueTypes">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Email.cs">Email.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StartupExtensions.cs">StartupExtensions.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
