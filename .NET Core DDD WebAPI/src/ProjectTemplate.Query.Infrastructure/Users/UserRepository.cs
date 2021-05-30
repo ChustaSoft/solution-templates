@@ -19,7 +19,7 @@ namespace ProjectTemplate.Query.Infrastructure.Users
         {
             using var db = new SqlConnection(_dbCconnectionString);
 
-            return await db.QueryFirstAsync<UserProfileReadModel>("select * from users where id = @id", userId);
+            return await db.QueryFirstAsync<UserProfileReadModel>("select * from UserProfileReadModels where id = @id", new { id = userId });
         }
     }
 }
