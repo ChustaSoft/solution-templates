@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Projections;
+using $ext_safeprojectname$.Framework.Projections;
 using $ext_safeprojectname$.Infrastructure.DataStore;
 using $ext_safeprojectname$.Infrastructure.DataStore.EventStore;
 using Microsoft.AspNetCore.Builder;

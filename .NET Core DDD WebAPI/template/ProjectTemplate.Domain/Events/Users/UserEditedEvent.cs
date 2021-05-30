@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Events;
+using $ext_safeprojectname$.Framework.Events;
 
 namespace $ext_safeprojectname$.Domain.Events.Users
 {

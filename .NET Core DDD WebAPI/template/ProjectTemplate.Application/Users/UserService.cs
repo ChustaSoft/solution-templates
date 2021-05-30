@@ -1,9 +1,15 @@
-﻿using $ext_safeprojectname$.Domain.Commands.Users;
+using $ext_safeprojectname$.Domain.Commands.Users;
 using $ext_safeprojectname$.Dto.Users;
 using System.Threading.Tasks;
 
 namespace $ext_safeprojectname$.Application.Users
 {
+    /// <summary>
+    /// The UserService converts the Dto's to commands. Note that the commands already contain validated information,
+    /// as all values are defined as ValueTypes with internal validation.
+    ///
+    /// After the command has been created the command is processed by the bus (the central processing for events and commands)
+    /// </summary>
     public class UserService : IUserService
     {
         private readonly IBus bus;

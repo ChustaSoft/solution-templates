@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Commands;
+using $ext_safeprojectname$.Framework.Commands;
 using System;
 
 namespace $ext_safeprojectname$.Framework.Test.BusTests.Commands

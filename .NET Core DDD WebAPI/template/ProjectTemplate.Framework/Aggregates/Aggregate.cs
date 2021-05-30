@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Events;
+using $ext_safeprojectname$.Framework.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Projections;
+using $ext_safeprojectname$.Framework.Projections;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace $ext_safeprojectname$.Framework

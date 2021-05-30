@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Query.Dto.Users;
+using $ext_safeprojectname$.Query.Dto.Users;
 using Dapper;
 using System;
 using System.Data.SqlClient;
@@ -19,7 +19,7 @@ namespace $ext_safeprojectname$.Query.Infrastructure.Users
         {
             using var db = new SqlConnection(_dbCconnectionString);
 
-            return await db.QueryFirstAsync<UserProfileReadModel>("select * from users where id = @id", userId);
+            return await db.QueryFirstAsync<UserProfileReadModel>("select * from UserProfileReadModels where id = @id", new { id = userId });
         }
     }
 }

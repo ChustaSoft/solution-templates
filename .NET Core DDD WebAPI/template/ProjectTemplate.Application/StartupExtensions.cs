@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Application.Users;
+using $ext_safeprojectname$.Application.Users;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace $ext_safeprojectname$.Application

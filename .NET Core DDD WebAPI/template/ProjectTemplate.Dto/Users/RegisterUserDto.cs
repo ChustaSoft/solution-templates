@@ -1,4 +1,4 @@
-﻿namespace $ext_safeprojectname$.Dto.Users
+namespace $ext_safeprojectname$.Dto.Users
 {
     public class RegisterUserDto
     {

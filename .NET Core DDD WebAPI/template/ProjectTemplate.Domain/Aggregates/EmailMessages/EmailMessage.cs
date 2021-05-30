@@ -1,4 +1,3 @@
-﻿using $ext_safeprojectname$.Domain.Aggregates.Users;
 using $ext_safeprojectname$.Domain.Commands.EmailMessages;
 using $ext_safeprojectname$.Domain.Events.EmailMessages;
 using $ext_safeprojectname$.Domain.Shared.ValueTypes;
@@ -24,6 +23,8 @@ namespace $ext_safeprojectname$.Domain.Aggregates.EmailMessages
 
         public async Task ProcessCommand(CreateEmailMessageCommand command)
         {
+            // Create an event that contains all information to produce the state change requested by the command. This
+            // enables the current state of the aggregate to be reconstructed from all events that happened to it.
             var emailMessageCreatedEvent = new EmailMessageCreatedEvent
             {
                 AggregateId = Guid.NewGuid(),
@@ -34,6 +35,10 @@ namespace $ext_safeprojectname$.Domain.Aggregates.EmailMessages
                 TextContent = command.TextContent
             };
 
+            // Call the following function to
+            // 1: change the state of this aggregate
+            // 2: verify the state of the aggregate (i.e. running the invariants)
+            // 3: raise the event in the system (which stores the event in the eventstore, triggers policies, updates projections)
             await ApplyAndRaiseEventOnSuccessAsync(emailMessageCreatedEvent);
         }
 

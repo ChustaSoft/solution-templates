@@ -1,4 +1,4 @@
-﻿namespace $ext_safeprojectname$.Framework.Events
+namespace $ext_safeprojectname$.Framework.Events
 {
     public interface IEventHandler<T> where T : DomainEvent
     {

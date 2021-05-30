@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Query.Application.Users;
+using $ext_safeprojectname$.Query.Application.Users;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace $ext_safeprojectname$.Query.Application

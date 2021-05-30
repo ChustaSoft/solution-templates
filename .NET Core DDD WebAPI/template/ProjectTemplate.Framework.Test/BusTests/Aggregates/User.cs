@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Aggregates;
+using $ext_safeprojectname$.Framework.Aggregates;
 using $ext_safeprojectname$.Framework.Commands;
 using $ext_safeprojectname$.Framework.Events;
 using $ext_safeprojectname$.Framework.Test.BusTests.Commands;

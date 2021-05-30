@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Infrastructure.DataStore.EventStore;
+using $ext_safeprojectname$.Infrastructure.DataStore.EventStore;
 using Microsoft.EntityFrameworkCore;
 using $ext_safeprojectname$.Query.Dto.Users;
 using System;

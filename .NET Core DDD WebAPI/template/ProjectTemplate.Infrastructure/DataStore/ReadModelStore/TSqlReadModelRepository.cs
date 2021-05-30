@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Repositories;
+using $ext_safeprojectname$.Framework.Repositories;
 using System;
 using System.Linq;
 using System.Threading.Tasks;

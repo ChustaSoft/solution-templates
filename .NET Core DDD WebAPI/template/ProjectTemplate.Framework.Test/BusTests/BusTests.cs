@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Policies;
+using $ext_safeprojectname$.Framework.Policies;
 using $ext_safeprojectname$.Framework.Projections;
 using $ext_safeprojectname$.Framework.Test.BusTests.Aggregates;
 using $ext_safeprojectname$.Framework.Test.BusTests.Commands;

@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Aggregates;
+using $ext_safeprojectname$.Framework.Aggregates;
 using System;
 using System.Collections.Generic;
 

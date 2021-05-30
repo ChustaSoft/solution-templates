@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Dto.Users;
+using $ext_safeprojectname$.Dto.Users;
 using System.Threading.Tasks;
 
 namespace $ext_safeprojectname$.Application.Users

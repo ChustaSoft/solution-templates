@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Application.Users;
+using $ext_safeprojectname$.Application.Users;
 using $ext_safeprojectname$.Dto.Users;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -7,6 +7,10 @@ using UsersReadService = $ext_safeprojectname$.Query.Application.Users;
 
 namespace $ext_safeprojectname$.WebApi.Controllers
 {
+    /// <summary>
+    /// Contains endpoints for Registering, Editing and getting users.
+    /// The Get-function calls an application service in the read stack.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

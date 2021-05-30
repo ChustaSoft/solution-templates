@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Query.Dto.Users;
+using $ext_safeprojectname$.Query.Dto.Users;
 using System;
 using System.Threading.Tasks;
 

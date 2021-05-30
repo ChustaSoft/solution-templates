@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Domain.Aggregates.Users;
+using $ext_safeprojectname$.Domain.Aggregates.Users;
 using $ext_safeprojectname$.Framework.AggregateRepositories;
 using $ext_safeprojectname$.Framework.Events;
 using System;

@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Framework.Policies;
+using $ext_safeprojectname$.Framework.Policies;
 using $ext_safeprojectname$.Framework.Test.BusTests.Commands;
 using $ext_safeprojectname$.Framework.Test.BusTests.Events;
 using System.Threading.Tasks;

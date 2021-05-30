@@ -1,4 +1,4 @@
-﻿using $ext_safeprojectname$.Domain.Events.Users;
+using $ext_safeprojectname$.Domain.Events.Users;
 using $ext_safeprojectname$.Framework.Projections;
 using $ext_safeprojectname$.Framework.Repositories;
 using $ext_safeprojectname$.Query.Dto.Users;
