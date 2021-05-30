@@ -1,5 +1,4 @@
-﻿using ProjectTemplate.Domain.Aggregates.Users;
-using ProjectTemplate.Domain.Commands.EmailMessages;
+﻿using ProjectTemplate.Domain.Commands.EmailMessages;
 using ProjectTemplate.Domain.Events.EmailMessages;
 using ProjectTemplate.Domain.Shared.ValueTypes;
 using ProjectTemplate.Framework.Aggregates;
@@ -24,6 +23,8 @@ namespace ProjectTemplate.Domain.Aggregates.EmailMessages
 
         public async Task ProcessCommand(CreateEmailMessageCommand command)
         {
+            // Create an event that contains all information to produce the state change requested by the command. This
+            // enables the current state of the aggregate to be reconstructed from all events that happened to it.
             var emailMessageCreatedEvent = new EmailMessageCreatedEvent
             {
                 AggregateId = Guid.NewGuid(),
@@ -34,6 +35,10 @@ namespace ProjectTemplate.Domain.Aggregates.EmailMessages
                 TextContent = command.TextContent
             };
 
+            // Call the following function to
+            // 1: change the state of this aggregate
+            // 2: verify the state of the aggregate (i.e. running the invariants)
+            // 3: raise the event in the system (which stores the event in the eventstore, triggers policies, updates projections)
             await ApplyAndRaiseEventOnSuccessAsync(emailMessageCreatedEvent);
         }
 

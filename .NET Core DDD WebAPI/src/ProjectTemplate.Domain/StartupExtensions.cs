@@ -17,13 +17,22 @@ namespace ProjectTemplate.Domain
     {
         public static void ConfigureDomainServices(this IServiceCollection serviceCollection)
         {
+            // make sure the aggregate can be found by the DI container
             serviceCollection.AddTransient<User>();
+
+            // register command handlers
             serviceCollection.AddTransient<ICommandHandler<RegisterUserCommand>, User>();
             serviceCollection.AddTransient<ICommandHandler<EditUserCommand>, User>();
             serviceCollection.AddTransient<ICommandHandler<CreateEmailMessageCommand>, EmailMessage>();
+
+            // register domain services
             serviceCollection.AddTransient<IUserRepository, UserRepository>();
+
+            // register projections
             serviceCollection.AddTransient<IProjection<UserRegisteredEvent>, UserProfileInformationProjectiosProjection>();
             serviceCollection.AddTransient<IProjection<UserEditedEvent>, UserProfileInformationProjectiosProjection>();
+
+            // register policies
             serviceCollection.AddTransient<IPolicy<UserRegisteredEvent>, SendWelcomEmailPolicy>();
         }
     }

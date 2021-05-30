@@ -2,7 +2,6 @@
 using ProjectTemplate.Domain.DomainServices.Repositories.Users;
 using ProjectTemplate.Domain.Events.Users;
 using ProjectTemplate.Domain.Shared.ValueTypes;
-using ProjectTemplate.Framework;
 using ProjectTemplate.Framework.Aggregates;
 using ProjectTemplate.Framework.Commands;
 using ProjectTemplate.Framework.Events;
@@ -31,9 +30,12 @@ namespace ProjectTemplate.Domain.Aggregates.Users
 
         public async Task ProcessCommand(RegisterUserCommand command)
         {
+            // Verify that the state of the system is such that the operation is allowed
             var UserWithEmailExists = await userRepository.UserExists(command.Email);
             if (UserWithEmailExists) throw new InvalidOperationException("trying to add a user that already exists");
 
+            // Create an event that contains all information to produce the state change requested by the command. This
+            // enables the current state of the aggregate to be reconstructed from all events that happened to it.
             var userRegisteredEvent = new UserRegisteredEvent
             {
                 AggregateId = Guid.NewGuid(),
@@ -43,23 +45,22 @@ namespace ProjectTemplate.Domain.Aggregates.Users
                 LastName = command.LastName,
                 RecoveryEmail = command.RecoveryEmail
             };
+
+            // Call the following function to
+            // 1: change the state of this aggregate
+            // 2: verify the state of the aggregate (i.e. running the invariants)
+            // 3: raise the event in the system (which stores the event in the eventstore, triggers policies, updates projections)
             await ApplyAndRaiseEventOnSuccessAsync(userRegisteredEvent);
         }
 
         public void PlayEvent(UserRegisteredEvent domainEvent)
         {
+            // Establish the state change
             FirstName = domainEvent.FirstName;
             LastName = domainEvent.LastName;
             Email = domainEvent.Email;
             RecoveryEmail = domainEvent.RecoveryEmail;
         }        
-
-        public void PlayEvent(UserEditedEvent domainEvent)
-        {
-            FirstName = domainEvent.FirstName;
-            LastName = domainEvent.LastName;
-            RecoveryEmail = domainEvent.RecoveryEmail;
-        }
 
         public async Task ProcessCommand(EditUserCommand command)
         {
@@ -74,6 +75,16 @@ namespace ProjectTemplate.Domain.Aggregates.Users
             await ApplyAndRaiseEventOnSuccessAsync(userEditedEvent);
         }
 
+        public void PlayEvent(UserEditedEvent domainEvent)
+        {
+            FirstName = domainEvent.FirstName;
+            LastName = domainEvent.LastName;
+            RecoveryEmail = domainEvent.RecoveryEmail;
+        }
+
+        /// <summary>
+        /// Defines an invariant of the aggregate. These functions are discovered automatically by reflection
+        /// </summary>
         [Invariant]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "This is discovered by reflection")]
         private void RecoveryEmail_must_differ_from_PrimaryEmail()

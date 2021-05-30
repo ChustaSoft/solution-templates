@@ -15,8 +15,8 @@ namespace ProjectTemplate.Domain.Policies
         {
             var command = new CreateEmailMessageCommand(
                 sender: "noreply@domain.com",
-                subjectLine: "Welcome to $safeprojectname$",
-                textContent: $"Dear {domainEvent.FirstName}: Welcome to $safeprojectname$!",
+                subjectLine: "Welcome to ProjectTemplate",
+                textContent: $"Dear {domainEvent.FirstName}: Welcome to ProjectTemplate",
                 destination: domainEvent.Email
             );
             return Task.FromResult(command);

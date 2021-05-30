@@ -5,6 +5,9 @@ using System;
 
 namespace ProjectTemplate.Query.Application.Users
 {
+    /// <summary>
+    /// This service is responsible for retrieving information needed by the frontend.
+    /// </summary>
     public class UserService : IUserService
     {
         private readonly IUserRepository userRepository;

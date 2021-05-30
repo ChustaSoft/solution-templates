@@ -7,6 +7,10 @@ using UsersReadService = ProjectTemplate.Query.Application.Users;
 
 namespace ProjectTemplate.WebApi.Controllers
 {
+    /// <summary>
+    /// Contains endpoints for Registering, Editing and getting users.
+    /// The Get-function calls an application service in the read stack.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

@@ -1,8 +1,10 @@
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     <TemplateData>
-        <Name>.NET Core DDD WebAPI</Name>
-        <Description>ChustaSoft .NET Core DDD WebAPI</Description>
+        <Name>ChustaSoft .NET Core DDD WebAPI</Name>
+        <Description>
+            ASP.NET 5 Web API project based on Eventsourcing and CQRS. The included sample implementation uses an SQL based eventstore and readmodel database. Entity Framework is used for write operations, while Dapper is used on the query stack
+        </Description>
         <Icon>Icon.ico</Icon>
         <ProjectType>CSharp</ProjectType>
         <CreateNewFolder>false</CreateNewFolder>
@@ -56,7 +58,7 @@
                 </ProjectTemplateLink>
             </SolutionFolder>
 
-            <SolutionFolder Name="Test">
+            <SolutionFolder Name="7. Test">
                 <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$.Framework.Test">
                     ProjectTemplate.Framework.Test\Framework.Test.vstemplate
                 </ProjectTemplateLink>
