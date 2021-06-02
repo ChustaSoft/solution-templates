@@ -1,0 +1,26 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>ProjectTemplate.Query.Application</Name>
+    <Description>.NET Core DDD WebAPI (Application (Query))</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ProjectTemplate.Query.Application</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ProjectTemplate.Query.Application.csproj" File="ProjectTemplate.Query.Application.csproj" ReplaceParameters="true">
+      <Folder Name="Users" TargetFolderName="Users">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IUserService.cs">IUserService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserService.cs">UserService.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StartupExtensions.cs">StartupExtensions.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

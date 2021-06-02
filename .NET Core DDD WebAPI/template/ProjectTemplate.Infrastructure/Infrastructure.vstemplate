@@ -1,0 +1,32 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>ProjectTemplate.Infrastructure</Name>
+    <Description>.NET Core DDD WebAPI (InfraStructure)</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ProjectTemplate.Infrastructure</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ProjectTemplate.Infrastructure.csproj" File="ProjectTemplate.Infrastructure.csproj" ReplaceParameters="true">
+      <Folder Name="DataStore" TargetFolderName="DataStore">
+        <Folder Name="EventStore" TargetFolderName="EventStore">
+          <ProjectItem ReplaceParameters="true" TargetFileName="EventData.cs">EventData.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="TSqlEventStore.cs">TSqlEventStore.cs</ProjectItem>
+        </Folder>
+        <Folder Name="ReadModelStore" TargetFolderName="ReadModelStore">
+          <ProjectItem ReplaceParameters="true" TargetFileName="TSqlReadModelRepository.cs">TSqlReadModelRepository.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Context.cs">Context.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StartupExtensions.cs">StartupExtensions.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

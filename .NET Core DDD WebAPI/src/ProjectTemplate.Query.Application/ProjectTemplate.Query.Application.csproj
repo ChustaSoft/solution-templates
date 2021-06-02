@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectTemplate.Query.Infrastructure\ProjectTemplate.Query.Infrastructure.csproj" />
+    <ProjectReference Include="..\ProjectTemplate.Query.Dto\ProjectTemplate.Query.Dto.csproj" />
+  </ItemGroup>
+
+</Project>
