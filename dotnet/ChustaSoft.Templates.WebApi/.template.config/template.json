@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "ChustaSoft - xaberue",
+    "defaultName": "ChustaSoft.WebApi",
+    "classifications": [
+        "Web",
+        "ASP.NET"
+    ],
+    "identity": "ChustaSoft.Templates.WebApi",
+    "name": "ChustaSoft.Templates.WebApi",
+    "shortName": "cs-webapi",
+    "sourceName": "ChustaSoft.Templates.WebApi",
+    "repository": {
+        "url": "https://github.com/ChustaSoft/solution-templates",
+        "type": "GitHub"
+    },
+    "projectURL": "https://github.com/ChustaSoft/solution-templates",
+    "releaseNotes": "https://github.com/ChustaSoft/solution-templates/blob/main/dotnet/ChustaSoft.Templates.WebApi/release_notes.md",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}
