@@ -11,7 +11,7 @@
     "shortName": "cs-webapi",
     "sourceName": "ChustaSoft.Templates.WebApi",
     "repository": {
-        "url": "https://github.com/ChustaSoft/solution-templates",
+        "url": "https://github.com/ChustaSoft/solution-templates/tree/main/dotnet/ChustaSoft.Templates.WebApi",
         "type": "GitHub"
     },
     "projectURL": "https://github.com/ChustaSoft/solution-templates",
