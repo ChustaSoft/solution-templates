@@ -10,7 +10,8 @@ public static class GetWeather
     {
         var forecast = new WeatherForecast[]
         {
-            new("Barcelone", DateOnly.FromDateTime(DateTime.Now), 25, "Sunny"),
+            new("Barcelona", DateOnly.FromDateTime(DateTime.Now).AddDays(-1), 24, "Sunny"),
+            new("Barcelona", DateOnly.FromDateTime(DateTime.Now), 25, "Sunny"),
             new("London", DateOnly.FromDateTime(DateTime.Now), 10, "Overcasted"),
             new("Paris", DateOnly.FromDateTime(DateTime.Now), 15, "Windy"),
             new("Moscow", DateOnly.FromDateTime(DateTime.Now), 7, "Partially cloudy"),

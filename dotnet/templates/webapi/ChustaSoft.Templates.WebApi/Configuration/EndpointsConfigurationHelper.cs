@@ -14,7 +14,7 @@ public static class EndpointsConfigurationHelper
                 .ReportApiVersions()
                 .Build();
 
-        var featureGroup = endpointRouteBuilder.MapGroup("api/v{apiVersion:apiVersion}/features").WithApiVersionSet(apiVersionSet);
+        var featureGroup = endpointRouteBuilder.MapGroup("api/v{apiVersion:apiVersion}/weather-forecasts").WithApiVersionSet(apiVersionSet);
 
         featureGroup
             .MapGet("/", GetWeather.HandleAsync).MapToApiVersion(1);
