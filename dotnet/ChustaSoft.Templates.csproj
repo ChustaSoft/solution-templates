@@ -4,7 +4,7 @@
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <PackageReadmeFile>content/templates/webapi/README.md</PackageReadmeFile>
-    <PackageIcon>content/templates/chustasoft_logo.ico</PackageIcon>
+    <PackageIcon>content/templates/chustasoft_logo.png</PackageIcon>
     <PackageType>Template</PackageType>
     <PackageVersion>1.0.0-beta.1</PackageVersion>
     <PackageId>ChustaSoft.Templates.WebApi</PackageId>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.template.config\**;templates\chustasoft_logo.ico" />
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.template.config\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
