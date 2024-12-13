@@ -20,7 +20,7 @@ public class GetWeatherIntegrationTests : IntegrationTestBase, IAsyncLifetime
     {
         // Act
         var response = await Client.GetAsync($"api/v1/weather-forecasts?city={city}");
-        var weatherForecasts = await response.Content.ReadFromJsonAsync<WeatherForecast[]>();
+        var weatherForecasts = await response.Content.ReadFromJsonAsync<WeatherForecastDto[]>();
 
         // Assert
         response.EnsureSuccessStatusCode();

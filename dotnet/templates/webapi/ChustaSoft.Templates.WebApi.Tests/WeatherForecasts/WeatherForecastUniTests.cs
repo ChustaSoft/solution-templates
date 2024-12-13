@@ -16,7 +16,7 @@ public class WeatherForecastUniTests
         var date = DateOnly.FromDateTime(new DateTime(int.Parse(dateStrSplit[0]), int.Parse(dateStrSplit[1]), int.Parse(dateStrSplit[2])));
 
         // Act
-        var result = new WeatherForecast(city, date, temperatureC, summary);
+        var result = new WeatherForecastDto(city, date, temperatureC, summary);
 
         // Assert
         Assert.Equal(city, result.City);
