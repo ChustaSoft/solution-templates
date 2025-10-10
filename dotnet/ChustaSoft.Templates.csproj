@@ -7,7 +7,7 @@
 		<PackageIcon>content/templates/chustasoft_logo.png</PackageIcon>
 		<PackageType>Template</PackageType>
 		<PackageId>ChustaSoft.Templates</PackageId>
-		<PackageVersion>1.0.0-alpha.2</PackageVersion>
+		<PackageVersion>1.0.0-beta.1</PackageVersion>
 		<PackageProjectUrl></PackageProjectUrl>
 		<Title>ChustaSoft Templates</Title>
 		<Authors>xaberue</Authors>
