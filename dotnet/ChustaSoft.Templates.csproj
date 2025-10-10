@@ -3,11 +3,11 @@
 	<PropertyGroup>
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<NoDefaultExcludes>true</NoDefaultExcludes>
-		<PackageReadmeFile>content/templates/webapi/README.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>content/templates/chustasoft_logo.png</PackageIcon>
 		<PackageType>Template</PackageType>
 		<PackageId>ChustaSoft.Templates</PackageId>
-		<PackageVersion>1.0.0-alpha.1</PackageVersion>
+		<PackageVersion>1.0.0-alpha.2</PackageVersion>
 		<PackageProjectUrl></PackageProjectUrl>
 		<Title>ChustaSoft Templates</Title>
 		<Authors>xaberue</Authors>
