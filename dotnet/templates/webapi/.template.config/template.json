@@ -2,7 +2,7 @@
     "$schema": "http://json.schemastore.org/template",
     "author": "ChustaSoft - xaberue",
     "name": "ChustaSoft.Templates.WebApi",
-    "description": "ChustaSoft .NET8 Minimal API template containing pre-built configurations such as Versioning and Open API",
+    "description": "ChustaSoft .NET9 Minimal API template containing pre-built configurations such as Versioning and Open API",
     "defaultName": "ChustaSoft.WebApi",
     "classifications": [
         "Web",
