@@ -1,0 +1,24 @@
+name: Publish ChustaSoft Templates NuGet
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.x
+      
+    - name: Build
+      run: dotnet pack --configuration Release
+      working-directory: ./dotnet
+
+    - name: Publish to NuGet
+      run: dotnet nuget push ./dotnet/bin/Release/*.nupkg --api-key ${{ secrets.CHUSTASOFT_NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
