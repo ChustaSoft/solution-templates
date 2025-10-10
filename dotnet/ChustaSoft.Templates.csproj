@@ -6,12 +6,12 @@
 		<PackageReadmeFile>content/templates/webapi/README.md</PackageReadmeFile>
 		<PackageIcon>content/templates/chustasoft_logo.png</PackageIcon>
 		<PackageType>Template</PackageType>
-		<PackageId>ChustaSoft.Templates.WebApi</PackageId>
+		<PackageId>ChustaSoft.Templates</PackageId>
 		<PackageVersion>1.0.0-alpha.1</PackageVersion>
 		<PackageProjectUrl></PackageProjectUrl>
-		<Title>ChustaSoft ASP.NET Core Minimal API</Title>
+		<Title>ChustaSoft Templates</Title>
 		<Authors>xaberue</Authors>
-		<Description>ChustaSoft ASP.NET Core Minimal API</Description>
+		<Description>ChustaSoft Templates</Description>
 		<PackageTags>dotnet-new;templates;minimalapi;web</PackageTags>
 		<TargetFramework>net9.0</TargetFramework>
 		<IncludeContentInPack>true</IncludeContentInPack>
