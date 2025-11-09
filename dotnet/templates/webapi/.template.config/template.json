@@ -43,6 +43,9 @@
     },
     "sources": [
         {
+            "include": [
+                "**/*"
+            ],
             "modifiers": [
                 {
                     "condition": "(apiDoc != \"swagger\")",
