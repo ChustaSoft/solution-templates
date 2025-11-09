@@ -4,7 +4,6 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<UserSecretsId>f024ef57-7e27-4880-aaad-f9e5a1e2de4c</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 	</PropertyGroup>
 
@@ -13,7 +12,12 @@
 		<PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+		  <!--#if (apiDoc == "swagger")-->
+  		<PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+  		<!--#endif-->
+  		<!--#if (apiDoc == "scalar")-->
+  		<PackageReference Include="Scalar.AspNetCore" Version="2.10.3" />
+  		<!--#endif-->
 	</ItemGroup>
 
 </Project>

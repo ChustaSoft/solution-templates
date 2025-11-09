@@ -13,6 +13,9 @@ public static class IEndpointRouteBuilderExtensions
 
         featureGroup
             .MapGet("/", GetWeather.HandleAsync)
+            .WithSummary("GET Weather Forecasts")
+            .WithDescription("This endpoints returns a list of weather forecasts.")
+            .WithTags("Weather Forecasts")
             .MapToApiVersion(1);
     }
 }

@@ -20,5 +20,37 @@
     "tags": {
         "language": "C#",
         "type": "project"
-    }
+    },
+    "symbols": {
+        "apiDoc": {
+            "type": "parameter",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "swagger",
+                    "value": "swagger",
+                    "description": "Use Swagger as Open API documentation UI."
+                },
+                {
+                    "choice": "scalar",
+                    "value": "scalar",
+                    "description": "Use Scalar as Open API documentation UI."
+                }
+            ],
+            "defaultValue": "swagger",
+            "description": "Select the Open API documentation UI to use in the project."
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "condition": "(apiDoc != \"swagger\")",
+                    "exclude": [
+                        "./ChustaSoft.Templates.WebApi/Configuration/SwaggerConfigurationHelper.cs"
+                    ]
+                }
+            ]
+        }
+    ]
 }
